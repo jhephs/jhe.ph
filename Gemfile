@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+
+gem 'haml-rails', '~> 0.9'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -49,4 +50,9 @@ group :development, :test do
 
   # For easier management of pow server
   gem 'powder'
+
+  # For consistent code practices
+  gem 'rubocop'
+  gem 'haml_lint'
+  gem 'scss_lint'
 end
