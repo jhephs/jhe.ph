@@ -17,14 +17,20 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
+# Use bootstrap for design and layout
+gem 'bootstrap-sass', '~> 3.3'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+# Build JSON APIs with ease.
+gem 'active_model_serializers', '~> 0.10.0.rc1'
+
+# Enable controller-level responds
+gem 'responders', '~> 2.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -54,5 +60,5 @@ group :development, :test do
   # For consistent code practices
   gem 'rubocop'
   gem 'haml_lint'
-  gem 'scss_lint'
+  gem 'scss_lint', require: false
 end
