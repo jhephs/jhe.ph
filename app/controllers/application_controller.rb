@@ -5,13 +5,13 @@ class ApplicationController < ActionController::Base
 
   concerning :Helpers do
     included do
-      helper_method :current_account
+      helper_method :current_user
     end
 
     private
 
-    def current_account
-      @current_account ||= Account.find_by_username('jhephs')
+    def current_user
+      @current_user ||= User.first
     end
   end
 
@@ -24,9 +24,6 @@ class ApplicationController < ActionController::Base
 
       # Respond to HTML and JSON requests only
       respond_to :html, :json
-
-      # Resolve default template if template is missing
-      append_view_path ApplicationResolver.new
     end
   end
 end

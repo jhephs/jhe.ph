@@ -1,0 +1,6 @@
+.container
+  .heading
+    %img{ src: 'https://gravatar.com/avatar/090fbb94bea317e5f4fa1c0da747dfcb.jpg?s=200',
+      class: 'img img-circle img-responsive img-thumbnail',
+      height: '200',
+      width: '200' }

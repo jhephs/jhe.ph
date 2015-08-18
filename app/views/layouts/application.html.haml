@@ -18,6 +18,11 @@
       = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
 
   %body
-    %h3 zczcf
-    = yield
-    = javascript_include_tag 'application'
+    %header.jumbotron
+    %section.template
+    %aside.scripts
+      :coffeescript
+        @App =
+          response: JSON.parse('#{local_assigns[:json]}')
+          router: '#{local_assigns[:router]}'
+      = javascript_include_tag 'application'

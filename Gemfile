@@ -20,6 +20,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use bootstrap for design and layout
 gem 'bootstrap-sass', '~> 3.3'
 
+# Use backbone for front-end js framework
+gem 'backbone-on-rails'
+
+# Use haml-coffee for js templates
+gem 'haml_coffee_assets'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

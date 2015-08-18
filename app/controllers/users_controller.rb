@@ -1,7 +1,19 @@
 class UsersController < ApplicationController
-  def show
-    @account = params[:username].present? ? Account.find(params[:username]) : current_account
+  def index
+    @users = User.all
 
-    respond_with @account
+    respond_with @users
+  end
+
+  def show
+    @user = current_user
+
+    respond_with @user
+  end
+
+  def new
+    @user = User.new
+
+    respond_with @user
   end
 end

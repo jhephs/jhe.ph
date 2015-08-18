@@ -11,6 +11,11 @@ require 'action_view/railtie'
 require 'sprockets/railtie'
 # require 'rails/test_unit/railtie'
 
+# TODO: Remove this once fixed.
+# SEE: https://github.com/netzpirat/haml_coffee_assets/issues/128#issuecomment-44226055
+require 'action_view'
+require 'action_view/template/resolver'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)

@@ -3,6 +3,7 @@
 Personal Website of Jeriel Paul A. Abayon
 
 ## Personal Environment
+Aside from the following installation instructions, you may have to do additional setup for each dependency.
 
 * RVM 1.26.11 - `\curl -sSL https://get.rvm.io | bash -s stable`
 * Homebrew 0.9.5 - `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
@@ -13,3 +14,4 @@ Personal Website of Jeriel Paul A. Abayon
 * Rails 4.2.3 - `bundle`
 * PostgreSQL 9.4.4 - `brew install postgresql`
 * Pow 0.5.0 - `brew install pow`
+* Direnv 2.7.0 - `brew install direnv`
