@@ -4,7 +4,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string :email
       t.string :username
       t.string :password_digest
-      t.references :user, index: true, foreign_key: true, type: :uuid
+      t.references :user, null: false, index: true, foreign_key: true, type: :uuid
 
       t.timestamps null: false
     end

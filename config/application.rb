@@ -42,8 +42,10 @@ module JhePh
 
     # Turn off file generators for some files
     config.generators do |g|
-      g.assets = false
-      g.helper = false
+      g.assets false
+      g.helper false
+      g.template_engine nil
+      g.skip_routes true
     end
 
     # Autoload following files

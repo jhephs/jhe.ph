@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150817072939) do
+ActiveRecord::Schema.define(version: 20150819002030) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20150817072939) do
 
   add_index "accounts", ["user_id"], name: "index_accounts_on_user_id", using: :btree
 
+  create_table "posts", id: :uuid, default: "gen_random_uuid()", force: :cascade do |t|
+    t.string   "title"
+    t.string   "slug"
+    t.text     "body"
+    t.datetime "posted_at"
+    t.uuid     "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
   create_table "users", id: :uuid, default: "gen_random_uuid()", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -36,4 +48,5 @@ ActiveRecord::Schema.define(version: 20150817072939) do
   end
 
   add_foreign_key "accounts", "users"
+  add_foreign_key "posts", "users"
 end

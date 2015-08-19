@@ -1,3 +1,3 @@
-class App.Views.UsersShow extends Backbone.View
+class App.Views.UsersShow extends App.View
 
   template: JST['users/show']

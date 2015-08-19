@@ -23,6 +23,9 @@ gem 'bootstrap-sass', '~> 3.3'
 # Use backbone for front-end js framework
 gem 'backbone-on-rails'
 
+# Use font-awesome for vector icons
+gem 'font-awesome-rails'
+
 # Use haml-coffee for js templates
 gem 'haml_coffee_assets'
 
@@ -44,6 +47,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# For slugging models
+gem 'friendly_id'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -62,6 +68,9 @@ group :development, :test do
 
   # For easier management of pow server
   gem 'powder'
+
+  # To disable assets logging
+  gem 'quiet_assets'
 
   # For consistent code practices
   gem 'rubocop'

@@ -5,13 +5,17 @@ class ApplicationController < ActionController::Base
 
   concerning :Helpers do
     included do
-      helper_method :current_user
+      helper_method :current_layout, :current_user
     end
 
     private
 
     def current_user
       @current_user ||= User.first
+    end
+
+    def current_layout
+      @current_layout ||= send(:_layout).inspect.split('/').last.split('.').first
     end
   end
 

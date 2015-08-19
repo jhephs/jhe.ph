@@ -20,11 +20,11 @@ _.extend App,
   Routers: {}
   initialize: ->
     # Instantiate router depending on which controller was used
-    router = App.Helpers.to_object(App.router)
-    new router()
+    App.router = new(App.Helpers.to_object(App.router_name))
 
     # Render layout
-    (new App.Views.Layouts.Application).render()
+    (App.layout = new(App.Helpers.to_object(App.layout_name))).render()
+
     Backbone.history.start pushState: true
 
 _.extend App, Backbone.Events
