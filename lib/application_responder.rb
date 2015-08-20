@@ -30,7 +30,6 @@ class ApplicationResponder < ActionController::Responder
 
   private
 
-  # Set layout to `application` if it is `nil`
   def layout_name
     (@options[:layout].is_a?(Proc) ? @options[:layout].call : @options[:layout]).try(:split, '/').try :last
   end

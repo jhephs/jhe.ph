@@ -1,0 +1,4 @@
++include 'layouts/application/header'
+%section.container
+  .template
+  +include 'layouts/application/sidebar'

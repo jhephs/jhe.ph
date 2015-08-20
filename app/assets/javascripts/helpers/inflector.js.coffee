@@ -1,6 +1,8 @@
-_.extend App.Helpers,
+class App.Helpers.Inflector
 
-  to_object: (name) ->
+  constructor: ->
+
+  @constantize: (name) ->
     name.split('.').reduce (prev, curr) ->
       return window[prev][curr] if typeof prev == 'string'
       prev[curr]
