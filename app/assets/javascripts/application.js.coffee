@@ -1,6 +1,6 @@
 #= require jquery
 #= require jquery_ujs
-#= require bootstrap-sprockets
+#= require bootstrap
 #= require underscore
 #= require backbone
 #= require_self

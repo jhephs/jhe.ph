@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '~> 4.2.4'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 # Use bootstrap for design and layout
-gem 'bootstrap-sass', '~> 3.3'
+gem 'bootstrap', github: 'twbs/bootstrap-rubygem'
 
 # Use backbone for front-end js framework
 gem 'backbone-on-rails'
